@@ -242,7 +242,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: BurickGames.keystore'
+  AndroidKeystoreName: '{dedicated}: gp_key.keystore'
   AndroidKeyaliasName: precious
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
