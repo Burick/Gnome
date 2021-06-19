@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 // Управляет состоянием игры.
@@ -189,6 +190,13 @@ public class GameManager : Singleton<GameManager> {
     // Вызывается в ответ на касание кнопки Restart.
     public void RestartGame() {
         // Немедленно удалить гномика (минуя этап гибели)
+        var bodyParts = FindObjectsOfType<BodyPart>();
+        foreach (var bodyPart in bodyParts)
+        { 
+            Destroy(bodyPart.gameObject);
+        }
+
+
         Destroy(currentGnome.gameObject);
         currentGnome = null;
         // Сбросить игру в исходное состояние, чтобы создать нового гномика.
